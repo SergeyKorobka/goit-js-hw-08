@@ -95,12 +95,12 @@ function renderGallery(outputEl, markup) {
 }
 
 function onClickGallery(e) {
-  e.preventDefault();
-  const { source } = e.target.dataset;
-
   if (!e.target.classList.contains('gallery-image')) {
     return;
   }
+
+  e.preventDefault();
+  const { source } = e.target.dataset;
 
   basicLightbox
     .create(
